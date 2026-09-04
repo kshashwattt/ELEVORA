@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elevora | Premium Pre-Booking Projects in Kolkata</title>
+
+    <meta name="description"
+          content="Elevora represents premium pre-booking residential projects in Kolkata, including Vinayak 21 Acres at Hatishala, off Newtown Action Area III.">
+
+    <link rel="icon" href="assets/elevora-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           ROOT
+        ========================================================= */
+
+        :root {
+            --red: #1e6fff;
+            --red-dark: #1254d4;
+            --green: #1a3a6e;
+            --dark: #070b14;
+            --dark-2: #10182a;
+            --cream: #f6f8fc;
+            --cream-2: #eef2f8;
+            --white: #ffffff;
+            --text: #121826;
+            --muted: #5b6576;
+            --border: #d7dee8;
+            --blue: #1e6fff;
+            --navy: #05080f;
+
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+            --display: "Montserrat", "DM Sans", Arial, sans-serif;
+
+            --container: 1240px;
+        }
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(var(--container), calc(100% - 40px));
+            margin: auto;
+        }
+
+        .serif {
+            font-family: var(--serif);
+        }
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 50px;
+            border: 1px solid transparent;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-red:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255,255,255,.5);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--green);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .logo-lockup {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo-lockup img {
+            height: 86px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links a {
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: .25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .header-social {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-social a {
+            width: 40px;
+            height: 40px;
+            color: #0a2f7a;
+            border: 1px solid #c9d7ee;
+            background: #eef4ff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-social a:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        .header-social svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .menu-btn {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--dark);
+            background: transparent;
+            border-radius: 50%;
+            font-size: 20px;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 100px 20px 20px;
+        }
+
+        .hero-inner {
+            min-height: calc(100vh - 120px);
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,8,15,.92),
+                    rgba(5,8,15,.58) 48%,
+                    rgba(5,8,15,.22)
+                ),
+                url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85")
+                center / cover;
+        }
+
+        .hero-content {
+            min-height: calc(100vh - 120px);
+            max-width: 750px;
+            padding: 100px 70px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(55px, 8vw, 105px);
+            line-height: .94;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #c5ddff;
+        }
+
+        .brand-kicker {
+            font-family: var(--display);
+            letter-spacing: 4px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: rgba(255,255,255,.86);
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 360px;
+            background: rgba(255,255,255,.94);
+            color: var(--dark);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .hero-stat {
+            padding: 20px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-stat:nth-child(2n) {
+            border-right: 0;
+        }
+
+        .hero-stat:nth-last-child(-n+2) {
+            border-bottom: 0;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-family: var(--serif);
+            color: var(--red);
+            font-size: 27px;
+        }
+
+        .hero-stat small {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           INTRO STATS
+        ========================================================= */
+
+        .stats {
+            padding: 70px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-box {
+            padding: 15px 30px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: var(--serif);
+            color: var(--red);
+            font-size: 38px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           SECTION COMMON
+        ========================================================= */
+
+        section {
+            padding: 110px 0;
+            scroll-margin-top: 90px;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 55px;
+        }
+
+        .section-kicker {
+            color: var(--red);
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(40px, 5vw, 65px);
+            line-height: 1.05;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 650px;
+        }
+
+        .elevora {
+            background: var(--navy);
+            color: white;
+        }
+
+        .elevora .section-kicker {
+            color: #7eb3ff;
+        }
+
+        .elevora .section-description,
+        .elevora p {
+            color: rgba(255,255,255,.7);
+        }
+
+        .elevora-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .elevora-points {
+            display: grid;
+            gap: 14px;
+        }
+
+        .elevora-point {
+            padding: 20px 22px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(30,111,255,.2);
+            border-radius: 14px;
+        }
+
+        .elevora-point strong {
+            display: block;
+            font-family: var(--display);
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .project-banner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding: 18px 22px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .project-banner small {
+            display: block;
+            color: var(--red);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+        .project-banner strong {
+            font-family: var(--serif);
+            font-size: 22px;
+        }
+
+        .about {
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 570px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+
+            background:
+                linear-gradient(180deg, transparent 55%, rgba(0,0,0,.5)),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+        }
+
+        .about-image-card {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: white;
+            padding: 22px 25px;
+            border-radius: 15px;
+        }
+
+        .about-image-card strong {
+            display: block;
+            font-family: var(--serif);
+            font-size: 30px;
+            color: var(--red);
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            padding: 18px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+        }
+
+        .feature strong {
+            display: block;
+            font-family: var(--serif);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .feature span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           MASTERPLAN
+        ========================================================= */
+
+        .masterplan {
+            background: var(--dark);
+            color: white;
+        }
+
+        .masterplan .section-description {
+            color: rgba(255,255,255,.65);
+        }
+
+        .masterplan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .master-card {
+            padding: 35px;
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 20px;
+        }
+
+        .master-card h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .amenity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .amenity {
+            padding: 13px 15px;
+            background: rgba(255,255,255,.05);
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           CENTRAL PARK
+        ========================================================= */
+
+        .park {
+            background: var(--cream-2);
+        }
+
+        .park-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .park-image {
+            min-height: 560px;
+            border-radius: 25px;
+            background:
+                linear-gradient(180deg, transparent, rgba(0,0,0,.35)),
+                url("https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1400&q=85")
+                center / cover;
+        }
+
+        .park-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .park-list div {
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: rgba(255,255,255,.45);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           RESIDENCES
+        ========================================================= */
+
+        .residences {
+            background: white;
+        }
+
+        .residence-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .residence-card {
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .3s ease;
+            background: white;
+        }
+
+        .residence-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
+        }
+
+        .residence-top {
+            padding: 25px;
+            background: var(--cream);
+        }
+
+        .residence-type {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .residence-card h3 {
+            font-family: var(--serif);
+            font-size: 29px;
+            margin: 7px 0;
+        }
+
+        .residence-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .residence-details {
+            padding: 23px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 11px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: 0;
+        }
+
+        .detail-row span {
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           SUSTAINABILITY
+        ========================================================= */
+
+        .sustainability {
+            background: #e7eee8;
+        }
+
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .green-badge {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            color: var(--red);
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .sustainability-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+        }
+
+        .eco-item {
+            background: rgba(255,255,255,.65);
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .eco-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .eco-item span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           LOCATION
+        ========================================================= */
+
+        .location {
+            background: var(--cream);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 50px;
+        }
+
+        .location-intro {
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+            border-radius: 22px;
+        }
+
+        .location-intro p {
+            color: rgba(255,255,255,.7);
+            margin: 20px 0;
+        }
+
+        .nearby-groups {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .nearby-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+        }
+
+        .nearby-card h3 {
+            font-family: var(--serif);
+            font-size: 22px;
+            margin-bottom: 13px;
+        }
+
+        .nearby-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nearby-item:last-child {
+            border-bottom: 0;
+        }
+
+        .nearby-item span {
+            color: var(--red);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           DEVELOPER
+        ========================================================= */
+
+        .developer {
+            background: var(--dark);
+            color: white;
+        }
+
+        .developer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .developer .section-description {
+            color: rgba(255,255,255,.7);
+        }
+
+        .developer-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .developer-stat {
+            padding: 30px;
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 17px;
+        }
+
+        .developer-stat strong {
+            font-family: var(--serif);
+            color: #7eb3ff;
+            font-size: 38px;
+            display: block;
+        }
+
+        .developer-stat span {
+            color: rgba(255,255,255,.65);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            padding-bottom: 80px;
+        }
+
+        .contact-box {
+            background: var(--red);
+            color: white;
+            border-radius: 28px;
+            padding: 75px;
+            display: grid;
+            grid-template-columns: 1fr .8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .contact-box h2 {
+            font-family: var(--serif);
+            font-size: clamp(42px, 5vw, 65px);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: rgba(255,255,255,.8);
+            max-width: 580px;
+        }
+
+        .form {
+            background: white;
+            color: var(--dark);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .form h3 {
+            font-family: var(--serif);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 13px;
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+            font-size: 13px;
+            background: #fafafa;
+        }
+
+        .form textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .form input:focus,
+        .form select:focus,
+        .form textarea:focus {
+            border-color: var(--red);
+        }
+
+        .form .btn {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #ffffff;
+            color: var(--text);
+            padding: 45px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            display: block;
+            height: 88px;
+            width: auto;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-copy {
+            color: var(--muted);
+            font-size: 12px;
+            max-width: 450px;
+            margin-top: 10px;
+        }
+
+        .footer-right a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #0a2f7a;
+        }
+
+        .footer-right a:hover {
+            color: var(--red);
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .contact-details a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 14px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .contact-details .contact-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .icon {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+        }
+
+        .icon svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .contact-details .icon {
+            border-color: rgba(255,255,255,.45);
+            background: rgba(255,255,255,.1);
+        }
+
+        .footer-right {
+            text-align: right;
+            color: var(--muted);
+            font-size: 13px;
+            display: grid;
+            gap: 10px;
+            justify-items: end;
+        }
+
+        .footer-right .icon {
+            width: 32px;
+            height: 32px;
+            color: #0a2f7a;
+            border-color: #c9d7ee;
+            background: #eef4ff;
+        }
+
+        .site-credit {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .site-credit a {
+            color: var(--red);
+            letter-spacing: 1px;
+        }
+
+        .contact-details small {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b9d4ff;
+        }
+
+        .legal {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .header-cta {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 88px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                border-bottom: 1px solid var(--border);
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-stats {
+                position: static;
+                margin: 0 25px 25px;
+                width: auto;
+            }
+
+            .hero-content {
+                padding: 80px 35px 40px;
+                min-height: auto;
+            }
+
+            .hero-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-box:nth-child(2) {
+                border-right: 0;
+            }
+
+            .stat-box {
+                border-bottom: 1px solid var(--border);
+                padding: 25px;
+            }
+
+            .about-grid,
+            .park-grid,
+            .sustainability-grid,
+            .location-grid,
+            .developer-grid,
+            .elevora-grid,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .residence-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-box {
+                padding: 50px 30px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+            }
+
+            .footer-right {
+                text-align: left;
+                justify-items: start;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(var(--container), calc(100% - 28px));
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                padding: 90px 10px 10px;
+            }
+
+            .hero-inner {
+                border-radius: 20px;
+            }
+
+            .hero-content {
+                padding: 65px 22px 25px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-stat {
+                padding: 14px;
+            }
+
+            .hero-stat strong {
+                font-size: 21px;
+            }
+
+            .stats-grid,
+            .residence-grid,
+            .masterplan-grid,
+            .nearby-groups,
+            .feature-list,
+            .park-list,
+            .sustainability-list,
+            .developer-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-box {
+                border-right: 0;
+            }
+
+            .about-image,
+            .park-image {
+                min-height: 380px;
+            }
+
+            .contact-box {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 43px;
+            }
+
+            .logo-lockup img {
+                height: 58px;
+            }
+
+            .nav-links {
+                gap: 5px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo-lockup">
+                <img src="assets/elevora-logo.png" alt="Elevora">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#elevora">Elevora</a>
+                <a href="#about">Featured Project</a>
+                <a href="#residences">Residences</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="header-social">
+                <a href="tel:+919062274928" aria-label="Call Elevora">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </a>
+                <a href="mailto:elevora.properties@gmail.com" aria-label="Email Elevora">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/elevora.properties/" target="_blank" rel="noopener noreferrer" aria-label="Elevora on Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 1 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                </a>
+            </div>
+
+            <a href="#contact" class="btn btn-red header-cta">
+                Enquire Now
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-inner">
+
+        <div class="hero-content">
+
+            <div class="eyebrow brand-kicker">
+                Elevora · Premium Pre-Booking
+            </div>
+
+            <h1>
+                Landmark Homes,<br>
+                <span>Before They Launch.</span>
+            </h1>
+
+            <p>
+                Elevora represents exclusive residential pre-booking
+                projects in Kolkata. Our current featured project is
+                Vinayak 21 Acres at Hatishala, off Newtown Action Area III —
+                a G+21 community of 2 &amp; 3 BHK residences with open
+                spaces, greenery and connected urban living.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn btn-red">
+                    View Vinayak 21 Acres →
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Enquire Through Elevora
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+                <strong>75%</strong>
+                <small>Open to Sky</small>
+            </div>
+
+            <div class="hero-stat">
+                <strong>3 Acres</strong>
+                <small>Central Park</small>
+            </div>
+
+            <div class="hero-stat">
+                <strong>G+21</strong>
+                <small>Sanctioned Towers</small>
+            </div>
+
+            <div class="hero-stat">
+                <strong>750+</strong>
+                <small>Homes</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ELEVORA
+========================================================= -->
+
+<section class="elevora" id="elevora">
+
+    <div class="container">
+
+        <div class="elevora-grid">
+
+            <div>
+
+                <div class="section-kicker">
+                    About Elevora
+                </div>
+
+                <h2 class="section-title">
+                    Your Partner For Pre-Booking Projects
+                </h2>
+
+                <p class="section-description">
+                    Elevora connects homebuyers with premium residential
+                    launches at the pre-booking stage. We work across
+                    multiple projects, bringing clear project information,
+                    site-visit support and a single point of contact
+                    from enquiry to allotment.
+                </p>
+
+                <p>
+                    Vinayak 21 Acres is one of the landmark communities
+                    we currently represent in Newtown, Kolkata — with
+                    more pre-booking opportunities added as they open.
+                </p>
+
+            </div>
+
+            <div class="elevora-points">
+
+                <div class="elevora-point">
+                    <strong>Multiple Projects</strong>
+                    Access more than one pre-booking launch through a single Elevora enquiry.
+                </div>
+
+                <div class="elevora-point">
+                    <strong>Verified Details</strong>
+                    Residences, amenities, location and RERA information presented clearly.
+                </div>
+
+                <div class="elevora-point">
+                    <strong>Guided Next Steps</strong>
+                    Pricing, availability and site visits handled by the Elevora team.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK STATS
+========================================================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat-box">
+                <div class="stat-number">5</div>
+                <div class="stat-label">
+                    Sanctioned G+21 Towers
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">750+</div>
+                <div class="stat-label">
+                    Homes
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">90%</div>
+                <div class="stat-label">
+                    Homes with 3-Side Open Views
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">IGBC</div>
+                <div class="stat-label">
+                    Precertified Platinum Green Building
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="project-banner">
+            <div>
+                <small>Featured Pre-Booking Project</small>
+                <strong>Vinayak 21 Acres · Newtown, Kolkata</strong>
+            </div>
+            <a href="#contact" class="btn btn-red">Get Price &amp; Availability</a>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <div class="about-image-card">
+                    <strong>3 Acres</strong>
+                    Central Park
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="section-kicker">
+                    The Project
+                </div>
+
+                <h2 class="section-title">
+                    A New Dimension of Urban Living
+                </h2>
+
+                <p>
+                    Represented by Elevora, Vinayak 21 Acres is designed
+                    around spacious, nature-inspired living while remaining
+                    connected to Kolkata's growing urban centre.
+                </p>
+
+                <p>
+                    Located adjacent to Newtown Action Area III,
+                    the development combines premium residences,
+                    landscaped open spaces, recreation,
+                    sustainability and everyday convenience.
+                </p>
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        <strong>75% Open to Sky</strong>
+                        <span>
+                            Designed around expansive outdoor spaces.
+                        </span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>3-Side Open Views</strong>
+                        <span>
+                            Promoting natural light and ventilation.
+                        </span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>Sky Terraces</strong>
+                        <span>
+                            Double-height terraces for openness.
+                        </span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>Vastu-Compliant</strong>
+                        <span>
+                            Thoughtfully oriented home layouts.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AMENITIES / MASTERPLAN
+========================================================= -->
+
+<section class="masterplan" id="amenities">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-kicker">
+                Lifestyle
+            </div>
+
+            <h2 class="section-title">
+                Designed Around Life
+            </h2>
+
+            <p class="section-description">
+                A broad range of recreational, fitness and
+                community spaces designed for residents of
+                different age groups.
+            </p>
+
+        </div>
+
+
+        <div class="masterplan-grid">
+
+            <div class="master-card">
+
+                <h3>
+                    Sports & Fitness
+                </h3>
+
+                <div class="amenity-grid">
+
+                    <div class="amenity">Open-air Futsal Ground</div>
+                    <div class="amenity">Athletic Track</div>
+                    <div class="amenity">Lawn Tennis Court</div>
+                    <div class="amenity">Cricket Play Arena</div>
+                    <div class="amenity">Jogging Track</div>
+                    <div class="amenity">Cycling Track</div>
+                    <div class="amenity">Pickleball Court</div>
+                    <div class="amenity">Badminton Court</div>
+                    <div class="amenity">Mini Basketball Court</div>
+                    <div class="amenity">Outdoor Fitness Zone</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="master-card">
+
+                <h3>
+                    Recreation & Community
+                </h3>
+
+                <div class="amenity-grid">
+
+                    <div class="amenity">Pet Park</div>
+                    <div class="amenity">Forest Trail</div>
+                    <div class="amenity">Open-air Amphitheatre</div>
+                    <div class="amenity">Kids' Play Areas</div>
+                    <div class="amenity">Open-air Skating Rink</div>
+                    <div class="amenity">Maze Garden</div>
+                    <div class="amenity">Senior Citizens' Seating</div>
+                    <div class="amenity">Barbeque Nook</div>
+                    <div class="amenity">Adventure Play Area</div>
+                    <div class="amenity">Podium Garden & Infinity Pool</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CENTRAL PARK
+========================================================= -->
+
+<section class="park">
+
+    <div class="container">
+
+        <div class="park-grid">
+
+            <div class="park-image"></div>
+
+            <div>
+
+                <div class="section-kicker">
+                    3-Acre Central Park
+                </div>
+
+                <h2 class="section-title">
+                    A Park For Every Generation
+                </h2>
+
+                <p class="section-description">
+                    A landscaped central green designed with
+                    spaces for play, fitness, relaxation,
+                    recreation and community interaction.
+                </p>
+
+                <div class="park-list">
+
+                    <div>Grand Lawn</div>
+                    <div>Fun Stream</div>
+                    <div>Kids' Play Areas</div>
+                    <div>Play Tunnel</div>
+                    <div>Open-air Amphitheatre</div>
+                    <div>Cascading Waters</div>
+                    <div>Adventure Challenge Area</div>
+                    <div>Skating Rink</div>
+                    <div>Pickleball Court</div>
+                    <div>Badminton Court</div>
+                    <div>Grand Pavilion</div>
+                    <div>Maze Garden</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESIDENCES
+========================================================= -->
+
+<section class="residences" id="residences">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-kicker">
+                Residences
+            </div>
+
+            <h2 class="section-title">
+                Homes Designed To Breathe
+            </h2>
+
+            <p class="section-description">
+                Thoughtfully planned 2 BHK and 3 BHK residences
+                with efficient layouts, natural ventilation,
+                balconies and sky terraces.
+            </p>
+
+        </div>
+
+
+        <div class="residence-grid">
+
+            <!-- 2 BHK -->
+
+            <article class="residence-card">
+
+                <div class="residence-top">
+
+                    <div class="residence-type">
+                        2 BHK
+                    </div>
+
+                    <h3>2 BHK 2T</h3>
+
+                    <p>
+                        Smart, efficient residential layout.
+                    </p>
+
+                </div>
+
+                <div class="residence-details">
+
+                    <div class="detail-row">
+                        <span>Carpet Area</span>
+                        <strong>596–597 sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Balcony</span>
+                        <strong>60 sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>SBUA</span>
+                        <strong>971 sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Type</span>
+                        <strong>2T</strong>
+                    </div>
+
+                    <a href="#contact" class="btn btn-dark"
+                       style="width:100%; margin-top:20px;">
+                        Get Price
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3 BHK SMART -->
+
+            <article class="residence-card">
+
+                <div class="residence-top">
+
+                    <div class="residence-type">
+                        3 BHK
+                    </div>
+
+                    <h3>Smart</h3>
+
+                    <p>
+                        Practical layouts with open views.
+                    </p>
+
+                </div>
+
+                <div class="residence-details">
+
+                    <div class="detail-row">
+                        <span>Configuration</span>
+                        <strong>3 BHK 2T</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Carpet Area</span>
+                        <strong>Approx. 698–703 sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Sky Terrace</span>
+                        <strong>5 ft wide*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Balcony</span>
+                        <strong>4 ft wide*</strong>
+                    </div>
+
+                    <a href="#contact" class="btn btn-dark"
+                       style="width:100%; margin-top:20px;">
+                        Get Price
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3 BHK LUXURY -->
+
+            <article class="residence-card">
+
+                <div class="residence-top">
+
+                    <div class="residence-type">
+                        3 BHK
+                    </div>
+
+                    <h3>Luxury</h3>
+
+                    <p>
+                        Larger layouts with premium planning.
+                    </p>
+
+                </div>
+
+                <div class="residence-details">
+
+                    <div class="detail-row">
+                        <span>Configuration</span>
+                        <strong>3 BHK 3T</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>BUA</span>
+                        <strong>Approx. 1,050+ sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>SBUA</span>
+                        <strong>Approx. 1,400+ sq ft*</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Sky Terrace</span>
+                        <strong>5 ft wide*</strong>
+                    </div>
+
+                    <a href="#contact" class="btn btn-dark"
+                       style="width:100%; margin-top:20px;">
+                        Get Price
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <p style="
+            margin-top:25px;
+            color:#777;
+            font-size:11px;
+        ">
+            *Areas and configurations shown are indicative examples
+            from the project overview. Contact for the latest
+            availability and detailed floor plans.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUSTAINABILITY
+========================================================= -->
+
+<section class="sustainability" id="sustainability">
+
+    <div class="container">
+
+        <div class="sustainability-grid">
+
+            <div>
+
+                <div class="green-badge">
+                    IGBC<br>
+                    PRECERTIFIED<br>
+                    PLATINUM
+                </div>
+
+                <div class="section-kicker">
+                    Sustainability
+                </div>
+
+                <h2 class="section-title">
+                    Carbon Conscious Homes
+                </h2>
+
+                <p class="section-description">
+                    Future-ready infrastructure focused on
+                    responsible resource use, efficient systems
+                    and a healthier living environment.
+                </p>
+
+            </div>
+
+
+            <div class="sustainability-list">
+
+                <div class="eco-item">
+                    <strong>Water-efficient Fixtures</strong>
+                    <span>Designed to reduce everyday water consumption.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>Solar Power</strong>
+                    <span>Solar power provision for common lighting.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>Waste Recycling</strong>
+                    <span>Waste reduction and management systems.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>Grey Water Treatment</strong>
+                    <span>Treatment infrastructure for responsible water use.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>Rainwater Harvesting</strong>
+                    <span>Provision for harvesting rainwater.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>EV Charging</strong>
+                    <span>Provision for electric vehicle charging.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>LED Common Lighting</strong>
+                    <span>Energy-efficient common-area lighting.</span>
+                </div>
+
+                <div class="eco-item">
+                    <strong>Low-VOC Paints</strong>
+                    <span>Health-safe low volatile organic compound paints.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCATION
+========================================================= -->
+
+<section class="location" id="location">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-kicker">
+                Location
+            </div>
+
+            <h2 class="section-title">
+                Connected To Everything That Matters
+            </h2>
+
+            <p class="section-description">
+                Located at Hatishala, off Newtown Action Area III,
+                with access to major workplaces, education,
+                healthcare, shopping and transport.
+            </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+            <div class="location-intro">
+
+                <div class="section-kicker">
+                    Project Address
+                </div>
+
+                <h2 class="serif" style="font-size:40px;">
+                    Vinayak 21 Acres
+                </h2>
+
+                <p>
+                    Hatishala,<br>
+                    Off Newtown Action Area III,<br>
+                    Kolkata, West Bengal
+                </p>
+
+                <a href="#contact" class="btn btn-red">
+                    Request Location Details
+                </a>
+
+            </div>
+
+
+            <div class="nearby-groups">
+
+                <div class="nearby-card">
+
+                    <h3>Connectivity</h3>
+
+                    <div class="nearby-item">
+                        Biswa Bangla Gate
+                        <span>12 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Nearest Metro
+                        <span>12 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Airport
+                        <span>30 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Science City
+                        <span>30 min</span>
+                    </div>
+
+                </div>
+
+
+                <div class="nearby-card">
+
+                    <h3>Work</h3>
+
+                    <div class="nearby-item">
+                        Infosys
+                        <span>1 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        ITC Infotech
+                        <span>2 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Wipro
+                        <span>2 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        TCS
+                        <span>12 min</span>
+                    </div>
+
+                </div>
+
+
+                <div class="nearby-card">
+
+                    <h3>Education</h3>
+
+                    <div class="nearby-item">
+                        Orchids International School
+                        <span>7 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        DPS Newtown
+                        <span>15 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        St. Xavier's University
+                        <span>7 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        UEM
+                        <span>7 min</span>
+                    </div>
+
+                </div>
+
+
+                <div class="nearby-card">
+
+                    <h3>Healthcare & Shopping</h3>
+
+                    <div class="nearby-item">
+                        Wellcare Nursing Home
+                        <span>&lt;1 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Tata Medical Centre
+                        <span>12 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Spencer's
+                        <span>6 min</span>
+                    </div>
+
+                    <div class="nearby-item">
+                        Downtown Mall
+                        <span>7 min</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEVELOPER
+========================================================= -->
+
+<section class="developer" id="developer">
+
+    <div class="container">
+
+        <div class="developer-grid">
+
+            <div>
+
+                <div class="section-kicker">
+                    Project Developer
+                </div>
+
+                <h2 class="section-title">
+                    The Vinayak Legacy
+                </h2>
+
+                <p class="section-description">
+                    Vinayak Group brings nearly four decades of
+                    experience in Kolkata's residential real-estate
+                    landscape, with a customer-first approach
+                    focused on thoughtful planning, quality and
+                    reliable delivery.
+                </p>
+
+            </div>
+
+
+            <div class="developer-stats">
+
+                <div class="developer-stat">
+                    <strong>45+</strong>
+                    <span>Projects Delivered</span>
+                </div>
+
+                <div class="developer-stat">
+                    <strong>5.7M</strong>
+                    <span>Sq Ft Under Construction</span>
+                </div>
+
+                <div class="developer-stat">
+                    <strong>7000+</strong>
+                    <span>Happy Residents</span>
+                </div>
+
+                <div class="developer-stat">
+                    <strong>40</strong>
+                    <span>Nearly Four Decades of Experience</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div>
+
+                <div class="section-kicker" style="color:#b9d4ff;">
+                    Enquire Through Elevora
+                </div>
+
+                <h2>
+                    Start Your<br>
+                    Pre-Booking.
+                </h2>
+
+                <p>
+                    Share your details with Elevora for pricing,
+                    availability, floor plans and site visits.
+                    Our featured project is Vinayak 21 Acres —
+                    ask us about other upcoming pre-booking launches too.
+                </p>
+
+                <div class="contact-details">
+                    <a href="tel:+919062274928">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </span>
+                        <span class="contact-text">
+                            <small>Phone</small>
+                            +91 90622 74928
+                        </span>
+                    </a>
+                    <a href="mailto:elevora.properties@gmail.com">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </span>
+                        <span class="contact-text">
+                            <small>Gmail</small>
+                            elevora.properties@gmail.com
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/elevora.properties/" target="_blank" rel="noopener noreferrer">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 1 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                        </span>
+                        <span class="contact-text">
+                            <small>Instagram</small>
+                            @elevora.properties
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <form class="form" id="leadForm">
+
+                <h3>
+                    Request Details
+                </h3>
+
+                <div class="form-group">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Full Name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Mobile Number"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address">
+                </div>
+
+                <div class="form-group">
+
+                    <select name="project">
+
+                        <option value="Vinayak 21 Acres">
+                            Vinayak 21 Acres
+                        </option>
+
+                        <option value="Other Elevora project">
+                            Other pre-booking project
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <select name="configuration">
+
+                        <option value="">
+                            Preferred Configuration
+                        </option>
+
+                        <option>2 BHK</option>
+                        <option>3 BHK</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <select name="purpose">
+
+                        <option value="">
+                            Purpose
+                        </option>
+
+                        <option>End Use</option>
+                        <option>Investment</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"></textarea>
+
+                </div>
+
+                <button type="submit" class="btn btn-red">
+                    Get Price & Availability
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <a href="#home" class="footer-brand">
+                    <img class="footer-logo" src="assets/elevora-logo.png" alt="Elevora">
+                </a>
+
+                <div class="footer-copy">
+                    Elevora represents premium pre-booking residential
+                    projects in Kolkata. Featured project: Vinayak 21 Acres,
+                    Hatishala, off Newtown Action Area III.
+                </div>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <a href="tel:+919062274928">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    +91 90622 74928
+                </a>
+
+                <a href="mailto:elevora.properties@gmail.com">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </span>
+                    elevora.properties@gmail.com
+                </a>
+
+                <a href="https://www.instagram.com/elevora.properties/" target="_blank" rel="noopener noreferrer">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 1 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                    </span>
+                    @elevora.properties
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="site-credit">
+            Website developed by
+            <a href="https://www.peakstreak.org/" target="_blank" rel="noopener noreferrer">PEAKSTREAK PVT LTD</a>
+        </div>
+
+
+        <div class="legal">
+
+            <strong>FEATURED PROJECT · RERA INFORMATION</strong><br><br>
+
+            Vinayak 21 Acres<br>
+            Phase 1:
+            WBRERA/P/SOU/2026/004147<br>
+
+            Phase 2:
+            WBRERA/P/SOU/2026/004275<br><br>
+
+            This website is for informational purposes only.
+            Elevora is a pre-booking representative and is not
+            the developer of the featured project unless stated
+            otherwise. Project plans, specifications, amenities,
+            access, phasing and other details may be subject to
+            change in accordance with applicable laws, statutory
+            approvals and technical considerations.
+
+            The project name "Vinayak 21 Acres" does not
+            represent the actual land area of the project/phase.
+            Prospective buyers should independently verify all
+            project details and documents and refer to the
+            applicable RERA disclosures and Agreement for Sale.
+
+            <br><br>
+
+            © 2026 Elevora. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* Mobile Navigation */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        menuBtn.textContent =
+            navLinks.classList.contains("active")
+            ? "×"
+            : "☰";
+
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+            menuBtn.textContent = "☰";
+
+        });
+
+    });
+
+
+    /* Lead Form */
+
+    const leadForm = document.getElementById("leadForm");
+
+    leadForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const formData = new FormData(leadForm);
+
+        const name = formData.get("name");
+        const phone = formData.get("phone");
+        const email = formData.get("email");
+        const project = formData.get("project");
+        const configuration = formData.get("configuration");
+        const purpose = formData.get("purpose");
+        const message = formData.get("message");
+
+        const subject =
+            "Elevora Enquiry — " + project;
+
+        const body =
+            "New Elevora Enquiry%0D%0A%0D%0A" +
+            "Name: " + encodeURIComponent(name) + "%0D%0A" +
+            "Phone: " + encodeURIComponent(phone) + "%0D%0A" +
+            "Email: " + encodeURIComponent(email) + "%0D%0A" +
+            "Project: " + encodeURIComponent(project) + "%0D%0A" +
+            "Configuration: " + encodeURIComponent(configuration) + "%0D%0A" +
+            "Purpose: " + encodeURIComponent(purpose) + "%0D%0A" +
+            "Message: " + encodeURIComponent(message);
+
+        window.location.href =
+            "mailto:elevora.properties@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            body;
+
+    });
+
+
+    /* Header shadow on scroll */
+
+    window.addEventListener("scroll", function() {
+
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 20) {
+
+            header.style.boxShadow =
+                "0 8px 30px rgba(0,0,0,.06)";
+
+        } else {
+
+            header.style.boxShadow = "none";
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
