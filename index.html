@@ -286,10 +286,10 @@
 
         .hero h1 {
             font-family: var(--serif);
-            font-size: clamp(55px, 8vw, 105px);
-            line-height: .94;
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: .98;
             font-weight: 600;
-            margin-bottom: 28px;
+            margin-bottom: 16px;
         }
 
         .hero h1 span {
@@ -396,13 +396,13 @@
         ========================================================= */
 
         section {
-            padding: 110px 0;
+            padding: 72px 0;
             scroll-margin-top: 90px;
         }
 
         .section-header {
             max-width: 700px;
-            margin-bottom: 55px;
+            margin-bottom: 32px;
         }
 
         .section-kicker {
@@ -416,10 +416,10 @@
 
         .section-title {
             font-family: var(--serif);
-            font-size: clamp(40px, 5vw, 65px);
-            line-height: 1.05;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.08;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
 
         .section-description {
@@ -627,12 +627,20 @@
         }
 
         .park-image {
-            min-height: 560px;
+            width: 100%;
+            max-width: 100%;
             border-radius: 25px;
-            background:
-                linear-gradient(180deg, transparent, rgba(0,0,0,.35)),
-                url("https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1400&q=85")
-                center / cover;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .park-image img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
         }
 
         .park-list {
@@ -903,9 +911,9 @@
 
         .contact-box h2 {
             font-family: var(--serif);
-            font-size: clamp(42px, 5vw, 65px);
-            line-height: 1;
-            margin-bottom: 20px;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+            margin-bottom: 12px;
         }
 
         .contact-box p {
@@ -965,14 +973,15 @@
         footer {
             background: #ffffff;
             color: var(--text);
-            padding: 45px 0;
+            padding: 64px 0 28px;
             border-top: 1px solid var(--border);
         }
 
         .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: 1.3fr .8fr 1.1fr 1fr;
+            gap: 42px 32px;
+            align-items: start;
         }
 
         .footer-logo {
@@ -982,16 +991,68 @@
         }
 
         .footer-brand {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
+        .footer-slogan {
+            margin-top: 12px;
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 600;
+            color: #0a2f7a;
+            line-height: 1.2;
+        }
+
         .footer-copy {
             color: var(--muted);
-            font-size: 12px;
-            max-width: 450px;
+            font-size: 13px;
+            max-width: 340px;
             margin-top: 10px;
+            line-height: 1.65;
+        }
+
+        .footer-col h3 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-project {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .footer-project strong {
+            display: block;
+            color: var(--text);
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .footer-project a {
+            color: #0a2f7a;
+            font-weight: 600;
         }
 
         .footer-right a {
@@ -999,6 +1060,8 @@
             align-items: center;
             gap: 10px;
             color: #0a2f7a;
+            font-size: 13px;
+            font-weight: 600;
         }
 
         .footer-right a:hover {
@@ -1007,17 +1070,17 @@
 
         .contact-details {
             display: grid;
-            gap: 12px;
-            margin-top: 28px;
+            gap: 8px;
+            margin-top: 18px;
         }
 
         .contact-details a {
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             color: white;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
         }
 
@@ -1050,12 +1113,11 @@
         }
 
         .footer-right {
-            text-align: right;
+            display: grid;
+            gap: 12px;
+            justify-items: start;
             color: var(--muted);
             font-size: 13px;
-            display: grid;
-            gap: 10px;
-            justify-items: end;
         }
 
         .footer-right .icon {
@@ -1067,12 +1129,23 @@
         }
 
         .site-credit {
-            margin-top: 22px;
-            padding-top: 18px;
-            border-top: 1px solid var(--border);
+            margin-top: 0;
+            padding-top: 0;
+            border-top: 0;
             font-size: 13px;
             font-weight: 600;
             color: var(--text);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         .site-credit a {
@@ -1089,12 +1162,16 @@
         }
 
         .legal {
-            margin-top: 35px;
-            padding-top: 25px;
+            margin-top: 18px;
+            padding-top: 18px;
             border-top: 1px solid var(--border);
             color: var(--muted);
             font-size: 10px;
             line-height: 1.7;
+        }
+
+        .legal p {
+            margin-bottom: 8px;
         }
 
         /* =========================================================
@@ -1177,7 +1254,7 @@
             }
 
             .footer-grid {
-                flex-direction: column;
+                grid-template-columns: 1fr 1fr;
             }
 
             .footer-right {
@@ -1193,7 +1270,7 @@
             }
 
             section {
-                padding: 75px 0;
+                padding: 56px 0;
             }
 
             .hero {
@@ -1209,7 +1286,7 @@
             }
 
             .hero h1 {
-                font-size: 55px;
+                font-size: 40px;
             }
 
             .hero p {
@@ -1239,9 +1316,12 @@
                 border-right: 0;
             }
 
-            .about-image,
-            .park-image {
+            .about-image {
                 min-height: 380px;
+            }
+
+            .park-image {
+                border-radius: 20px;
             }
 
             .contact-box {
@@ -1249,11 +1329,15 @@
             }
 
             .section-title {
-                font-size: 43px;
+                font-size: 34px;
             }
 
             .logo-lockup img {
                 height: 58px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
 
             .nav-links {
@@ -1280,7 +1364,7 @@
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="#elevora">Elevora</a>
+                <a href="#home">Home</a>
                 <a href="#about">Featured Project</a>
                 <a href="#residences">Residences</a>
                 <a href="#amenities">Amenities</a>
@@ -1331,26 +1415,23 @@
             </div>
 
             <h1>
-                Landmark Homes,<br>
-                <span>Before They Launch.</span>
+                Elevating<br>
+                <span>Every Address.</span>
             </h1>
 
             <p>
-                Elevora represents exclusive residential pre-booking
-                projects in Kolkata. Our current featured project is
-                Vinayak 21 Acres at Hatishala, off Newtown Action Area III —
-                a G+21 community of 2 &amp; 3 BHK residences with open
-                spaces, greenery and connected urban living.
+                Exclusive pre-booking in Kolkata. Featured: Vinayak 21 Acres,
+                Hatishala — 2 &amp; 3 BHK, G+21 towers.
             </p>
 
             <div class="hero-buttons">
 
                 <a href="#about" class="btn btn-red">
-                    View Vinayak 21 Acres →
+                    View Project →
                 </a>
 
                 <a href="#contact" class="btn btn-outline">
-                    Enquire Through Elevora
+                    Enquire
                 </a>
 
             </div>
@@ -1400,25 +1481,16 @@
             <div>
 
                 <div class="section-kicker">
-                    About Elevora
+                    Elevating Every Address
                 </div>
 
                 <h2 class="section-title">
-                    Your Partner For Pre-Booking Projects
+                    Pre-Booking, Made Simple
                 </h2>
 
                 <p class="section-description">
-                    Elevora connects homebuyers with premium residential
-                    launches at the pre-booking stage. We work across
-                    multiple projects, bringing clear project information,
-                    site-visit support and a single point of contact
-                    from enquiry to allotment.
-                </p>
-
-                <p>
-                    Vinayak 21 Acres is one of the landmark communities
-                    we currently represent in Newtown, Kolkata — with
-                    more pre-booking opportunities added as they open.
+                    Elevora helps you book premium launches early —
+                    with clear details, site visits and one point of contact.
                 </p>
 
             </div>
@@ -1427,17 +1499,17 @@
 
                 <div class="elevora-point">
                     <strong>Multiple Projects</strong>
-                    Access more than one pre-booking launch through a single Elevora enquiry.
+                    One enquiry for current and upcoming launches.
                 </div>
 
                 <div class="elevora-point">
-                    <strong>Verified Details</strong>
-                    Residences, amenities, location and RERA information presented clearly.
+                    <strong>Clear Details</strong>
+                    Homes, amenities, location and RERA, simply presented.
                 </div>
 
                 <div class="elevora-point">
-                    <strong>Guided Next Steps</strong>
-                    Pricing, availability and site visits handled by the Elevora team.
+                    <strong>Next Steps</strong>
+                    Price, availability and site visits handled by us.
                 </div>
 
             </div>
@@ -1507,7 +1579,7 @@
                 <small>Featured Pre-Booking Project</small>
                 <strong>Vinayak 21 Acres · Newtown, Kolkata</strong>
             </div>
-            <a href="#contact" class="btn btn-red">Get Price &amp; Availability</a>
+            <a href="#contact" class="btn btn-red">Get Price</a>
         </div>
 
         <div class="about-grid">
@@ -1529,50 +1601,30 @@
                 </div>
 
                 <h2 class="section-title">
-                    A New Dimension of Urban Living
+                    Open Living in Newtown
                 </h2>
 
                 <p>
-                    Represented by Elevora, Vinayak 21 Acres is designed
-                    around spacious, nature-inspired living while remaining
-                    connected to Kolkata's growing urban centre.
-                </p>
-
-                <p>
-                    Located adjacent to Newtown Action Area III,
-                    the development combines premium residences,
-                    landscaped open spaces, recreation,
-                    sustainability and everyday convenience.
+                    Vinayak 21 Acres, off Action Area III — premium homes
+                    with parks, recreation and easy city access.
                 </p>
 
                 <div class="feature-list">
 
                     <div class="feature">
                         <strong>75% Open to Sky</strong>
-                        <span>
-                            Designed around expansive outdoor spaces.
-                        </span>
                     </div>
 
                     <div class="feature">
                         <strong>3-Side Open Views</strong>
-                        <span>
-                            Promoting natural light and ventilation.
-                        </span>
                     </div>
 
                     <div class="feature">
                         <strong>Sky Terraces</strong>
-                        <span>
-                            Double-height terraces for openness.
-                        </span>
                     </div>
 
                     <div class="feature">
                         <strong>Vastu-Compliant</strong>
-                        <span>
-                            Thoughtfully oriented home layouts.
-                        </span>
                     </div>
 
                 </div>
@@ -1601,13 +1653,11 @@
             </div>
 
             <h2 class="section-title">
-                Designed Around Life
+                Sports, Play & Community
             </h2>
 
             <p class="section-description">
-                A broad range of recreational, fitness and
-                community spaces designed for residents of
-                different age groups.
+                Fitness and leisure spaces for every age.
             </p>
 
         </div>
@@ -1656,7 +1706,7 @@
                     <div class="amenity">Senior Citizens' Seating</div>
                     <div class="amenity">Barbeque Nook</div>
                     <div class="amenity">Adventure Play Area</div>
-                    <div class="amenity">Podium Garden & Infinity Pool</div>
+                    <div class="amenity">Podium & Pool</div>
 
                 </div>
 
@@ -1679,7 +1729,9 @@
 
         <div class="park-grid">
 
-            <div class="park-image"></div>
+            <div class="park-image">
+                <img src="assets/img2.png" alt="Vinayak 21 Acres 3-acre central park">
+            </div>
 
             <div>
 
@@ -1688,28 +1740,20 @@
                 </div>
 
                 <h2 class="section-title">
-                    A Park For Every Generation
+                    3-Acre Central Park
                 </h2>
 
                 <p class="section-description">
-                    A landscaped central green designed with
-                    spaces for play, fitness, relaxation,
-                    recreation and community interaction.
+                    Play, fitness and gathering spaces in one green heart.
                 </p>
 
                 <div class="park-list">
 
                     <div>Grand Lawn</div>
-                    <div>Fun Stream</div>
-                    <div>Kids' Play Areas</div>
-                    <div>Play Tunnel</div>
-                    <div>Open-air Amphitheatre</div>
-                    <div>Cascading Waters</div>
-                    <div>Adventure Challenge Area</div>
+                    <div>Kids' Play</div>
+                    <div>Amphitheatre</div>
                     <div>Skating Rink</div>
-                    <div>Pickleball Court</div>
-                    <div>Badminton Court</div>
-                    <div>Grand Pavilion</div>
+                    <div>Pavilion</div>
                     <div>Maze Garden</div>
 
                 </div>
@@ -1738,13 +1782,11 @@
             </div>
 
             <h2 class="section-title">
-                Homes Designed To Breathe
+                2 &amp; 3 BHK Homes
             </h2>
 
             <p class="section-description">
-                Thoughtfully planned 2 BHK and 3 BHK residences
-                with efficient layouts, natural ventilation,
-                balconies and sky terraces.
+                Efficient layouts with balconies and sky terraces.
             </p>
 
         </div>
@@ -1764,9 +1806,7 @@
 
                     <h3>2 BHK 2T</h3>
 
-                    <p>
-                        Smart, efficient residential layout.
-                    </p>
+                    <p>Compact 2T layout.</p>
 
                 </div>
 
@@ -1814,9 +1854,7 @@
 
                     <h3>Smart</h3>
 
-                    <p>
-                        Practical layouts with open views.
-                    </p>
+                    <p>Open views, 2T plan.</p>
 
                 </div>
 
@@ -1829,7 +1867,7 @@
 
                     <div class="detail-row">
                         <span>Carpet Area</span>
-                        <strong>Approx. 698–703 sq ft*</strong>
+                        <strong>698–703 sq ft*</strong>
                     </div>
 
                     <div class="detail-row">
@@ -1864,9 +1902,7 @@
 
                     <h3>Luxury</h3>
 
-                    <p>
-                        Larger layouts with premium planning.
-                    </p>
+                    <p>Larger 3T plan.</p>
 
                 </div>
 
@@ -1879,12 +1915,12 @@
 
                     <div class="detail-row">
                         <span>BUA</span>
-                        <strong>Approx. 1,050+ sq ft*</strong>
+                        <strong>1,050+ sq ft*</strong>
                     </div>
 
                     <div class="detail-row">
                         <span>SBUA</span>
-                        <strong>Approx. 1,400+ sq ft*</strong>
+                        <strong>1,400+ sq ft*</strong>
                     </div>
 
                     <div class="detail-row">
@@ -1908,9 +1944,7 @@
             color:#777;
             font-size:11px;
         ">
-            *Areas and configurations shown are indicative examples
-            from the project overview. Contact for the latest
-            availability and detailed floor plans.
+            *Indicative areas. Ask Elevora for latest plans.
         </p>
 
     </div>
@@ -1941,13 +1975,11 @@
                 </div>
 
                 <h2 class="section-title">
-                    Carbon Conscious Homes
+                    IGBC Platinum
                 </h2>
 
                 <p class="section-description">
-                    Future-ready infrastructure focused on
-                    responsible resource use, efficient systems
-                    and a healthier living environment.
+                    Water, solar, waste and EV-ready systems.
                 </p>
 
             </div>
@@ -1957,42 +1989,34 @@
 
                 <div class="eco-item">
                     <strong>Water-efficient Fixtures</strong>
-                    <span>Designed to reduce everyday water consumption.</span>
                 </div>
 
                 <div class="eco-item">
                     <strong>Solar Power</strong>
-                    <span>Solar power provision for common lighting.</span>
                 </div>
 
                 <div class="eco-item">
                     <strong>Waste Recycling</strong>
-                    <span>Waste reduction and management systems.</span>
                 </div>
 
                 <div class="eco-item">
                     <strong>Grey Water Treatment</strong>
-                    <span>Treatment infrastructure for responsible water use.</span>
                 </div>
 
                 <div class="eco-item">
                     <strong>Rainwater Harvesting</strong>
-                    <span>Provision for harvesting rainwater.</span>
                 </div>
 
                 <div class="eco-item">
                     <strong>EV Charging</strong>
-                    <span>Provision for electric vehicle charging.</span>
                 </div>
 
                 <div class="eco-item">
-                    <strong>LED Common Lighting</strong>
-                    <span>Energy-efficient common-area lighting.</span>
+                    <strong>LED Lighting</strong>
                 </div>
 
                 <div class="eco-item">
                     <strong>Low-VOC Paints</strong>
-                    <span>Health-safe low volatile organic compound paints.</span>
                 </div>
 
             </div>
@@ -2019,13 +2043,11 @@
             </div>
 
             <h2 class="section-title">
-                Connected To Everything That Matters
+                Newtown, Well Connected
             </h2>
 
             <p class="section-description">
-                Located at Hatishala, off Newtown Action Area III,
-                with access to major workplaces, education,
-                healthcare, shopping and transport.
+                Hatishala, off Action Area III — work, schools, healthcare nearby.
             </p>
 
         </div>
@@ -2039,18 +2061,16 @@
                     Project Address
                 </div>
 
-                <h2 class="serif" style="font-size:40px;">
+                <h2 class="serif" style="font-size:28px;">
                     Vinayak 21 Acres
                 </h2>
 
                 <p>
-                    Hatishala,<br>
-                    Off Newtown Action Area III,<br>
-                    Kolkata, West Bengal
+                    Hatishala, off Action Area III, Kolkata
                 </p>
 
                 <a href="#contact" class="btn btn-red">
-                    Request Location Details
+                    Enquire
                 </a>
 
             </div>
@@ -2191,15 +2211,11 @@
                 </div>
 
                 <h2 class="section-title">
-                    The Vinayak Legacy
+                    Vinayak Group
                 </h2>
 
                 <p class="section-description">
-                    Vinayak Group brings nearly four decades of
-                    experience in Kolkata's residential real-estate
-                    landscape, with a customer-first approach
-                    focused on thoughtful planning, quality and
-                    reliable delivery.
+                    Nearly 40 years in Kolkata housing — 45+ projects delivered.
                 </p>
 
             </div>
@@ -2223,8 +2239,8 @@
                 </div>
 
                 <div class="developer-stat">
-                    <strong>40</strong>
-                    <span>Nearly Four Decades of Experience</span>
+                    <strong>40 yrs</strong>
+                    <span>Experience</span>
                 </div>
 
             </div>
@@ -2249,19 +2265,15 @@
             <div>
 
                 <div class="section-kicker" style="color:#b9d4ff;">
-                    Enquire Through Elevora
+                    Contact
                 </div>
 
                 <h2>
-                    Start Your<br>
-                    Pre-Booking.
+                    Enquire Now
                 </h2>
 
                 <p>
-                    Share your details with Elevora for pricing,
-                    availability, floor plans and site visits.
-                    Our featured project is Vinayak 21 Acres —
-                    ask us about other upcoming pre-booking launches too.
+                    Price, plans and site visit for Vinayak 21 Acres.
                 </p>
 
                 <div class="contact-details">
@@ -2269,28 +2281,19 @@
                         <span class="icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         </span>
-                        <span class="contact-text">
-                            <small>Phone</small>
-                            +91 90622 74928
-                        </span>
+                        <span class="contact-text">9062274928</span>
                     </a>
                     <a href="mailto:elevora.properties@gmail.com">
                         <span class="icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         </span>
-                        <span class="contact-text">
-                            <small>Gmail</small>
-                            elevora.properties@gmail.com
-                        </span>
+                        <span class="contact-text">elevora.properties@gmail.com</span>
                     </a>
                     <a href="https://www.instagram.com/elevora.properties/" target="_blank" rel="noopener noreferrer">
                         <span class="icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 1 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
                         </span>
-                        <span class="contact-text">
-                            <small>Instagram</small>
-                            @elevora.properties
-                        </span>
+                        <span class="contact-text">@elevora.properties</span>
                     </a>
                 </div>
 
@@ -2300,7 +2303,7 @@
             <form class="form" id="leadForm">
 
                 <h3>
-                    Request Details
+                    Quick Enquiry
                 </h3>
 
                 <div class="form-group">
@@ -2335,7 +2338,7 @@
                         </option>
 
                         <option value="Other Elevora project">
-                            Other pre-booking project
+                            Other project
                         </option>
 
                     </select>
@@ -2347,7 +2350,7 @@
                     <select name="configuration">
 
                         <option value="">
-                            Preferred Configuration
+                            2 BHK / 3 BHK
                         </option>
 
                         <option>2 BHK</option>
@@ -2357,31 +2360,8 @@
 
                 </div>
 
-                <div class="form-group">
-
-                    <select name="purpose">
-
-                        <option value="">
-                            Purpose
-                        </option>
-
-                        <option>End Use</option>
-                        <option>Investment</option>
-
-                    </select>
-
-                </div>
-
-                <div class="form-group">
-
-                    <textarea
-                        name="message"
-                        placeholder="Your Message"></textarea>
-
-                </div>
-
                 <button type="submit" class="btn btn-red">
-                    Get Price & Availability
+                    Get Price
                 </button>
 
             </form>
@@ -2412,9 +2392,8 @@
                 </a>
 
                 <div class="footer-copy">
-                    Elevora represents premium pre-booking residential
-                    projects in Kolkata. Featured project: Vinayak 21 Acres,
-                    Hatishala, off Newtown Action Area III.
+                    Elevating Every Address.<br>
+                    Pre-booking projects in Kolkata. Featured: Vinayak 21 Acres.
                 </div>
 
             </div>
@@ -2455,32 +2434,13 @@
 
         <div class="legal">
 
-            <strong>FEATURED PROJECT · RERA INFORMATION</strong><br><br>
-
-            Vinayak 21 Acres<br>
-            Phase 1:
-            WBRERA/P/SOU/2026/004147<br>
-
-            Phase 2:
-            WBRERA/P/SOU/2026/004275<br><br>
-
-            This website is for informational purposes only.
-            Elevora is a pre-booking representative and is not
-            the developer of the featured project unless stated
-            otherwise. Project plans, specifications, amenities,
-            access, phasing and other details may be subject to
-            change in accordance with applicable laws, statutory
-            approvals and technical considerations.
-
-            The project name "Vinayak 21 Acres" does not
-            represent the actual land area of the project/phase.
-            Prospective buyers should independently verify all
-            project details and documents and refer to the
-            applicable RERA disclosures and Agreement for Sale.
-
-            <br><br>
-
-            © 2026 Elevora. All Rights Reserved.
+            <strong>RERA</strong> · Vinayak 21 Acres ·
+            Phase 1: WBRERA/P/SOU/2026/004147 ·
+            Phase 2: WBRERA/P/SOU/2026/004275<br>
+            For information only. Elevora is a pre-booking representative, not the developer.
+            Specs may change. Verify RERA papers before booking.
+            <br>
+            © 2026 Elevora.
 
         </div>
 
@@ -2541,8 +2501,6 @@
         const email = formData.get("email");
         const project = formData.get("project");
         const configuration = formData.get("configuration");
-        const purpose = formData.get("purpose");
-        const message = formData.get("message");
 
         const subject =
             "Elevora Enquiry — " + project;
@@ -2553,9 +2511,7 @@
             "Phone: " + encodeURIComponent(phone) + "%0D%0A" +
             "Email: " + encodeURIComponent(email) + "%0D%0A" +
             "Project: " + encodeURIComponent(project) + "%0D%0A" +
-            "Configuration: " + encodeURIComponent(configuration) + "%0D%0A" +
-            "Purpose: " + encodeURIComponent(purpose) + "%0D%0A" +
-            "Message: " + encodeURIComponent(message);
+            "Configuration: " + encodeURIComponent(configuration);
 
         window.location.href =
             "mailto:elevora.properties@gmail.com" +
