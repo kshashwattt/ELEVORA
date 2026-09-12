@@ -12,22 +12,24 @@
     }
 
     if (menuBtn && navLinks) {
-        menuBtn.addEventListener("click", function () {
+        menuBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             setMenu(!navLinks.classList.contains("active"));
         });
     }
 
-    document.querySelectorAll("header a[href], footer a[href]").forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            var href = link.getAttribute("href") || "";
-            if (/^(tel:|mailto:|https?:|#)/i.test(href)) {
-                if (navLinks && navLinks.contains(link)) setMenu(false);
-                return;
-            }
-            event.preventDefault();
-            window.location.href = link.href;
-        });
-    });
+    document.addEventListener("click", function (event) {
+        var link = event.target.closest("a[href]");
+        if (!link) return;
+
+        var href = link.getAttribute("href") || "";
+        if (!href || /^(tel:|mailto:|https?:|#)/i.test(href)) return;
+        if (link.target === "_blank") return;
+
+        event.preventDefault();
+        window.location.assign(link.href);
+    }, true);
 
     window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
