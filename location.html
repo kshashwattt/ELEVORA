@@ -8,8 +8,8 @@
     <link rel="icon" href="assets/elevora-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=photos2">
 </head>
 <body>
 <header>
@@ -20,11 +20,12 @@
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
-                <a href="project.html">Featured Project</a>
+                <a href="project.html">Projects</a>
                 <a href="residences.html">Residences</a>
                 <a href="amenities.html">Amenities</a>
                 <a href="location.html" class="active">Location</a>
                 <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-enquire">Enquire Now</a>
             </div>
             <div class="header-social">
                 <a href="tel:+919062274928" aria-label="Call Elevora">
@@ -38,13 +39,15 @@
                 </a>
             </div>
             <a href="contact.html" class="btn btn-red header-cta">Enquire Now</a>
-            <button class="menu-btn" id="menuBtn">☰</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </div>
 </header>
 
 <main>
-<section class="page-hero">
+<section class="page-hero page-hero-location">
     <div class="container">
         <div class="section-kicker">Vinayak 21 Acres</div>
         <h1>Location</h1>
@@ -59,6 +62,9 @@
                 <h2 class="serif" style="font-size:28px;">Vinayak 21 Acres</h2>
                 <p>Hatishala, off Action Area III, Kolkata</p>
                 <a href="contact.html" class="btn btn-red">Enquire</a>
+            </div>
+            <div class="location-visual">
+                <img src="assets/im2.jpg" alt="Vinayak 21 Acres towers near Newtown, Kolkata">
             </div>
             <div class="nearby-groups">
                 <div class="nearby-card">
@@ -148,24 +154,6 @@
         </div>
     </div>
 </footer>
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    menuBtn.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-        menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
-    });
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuBtn.textContent = "☰";
-        });
-    });
-    window.addEventListener("scroll", function() {
-        const header = document.querySelector("header");
-        header.style.boxShadow = window.scrollY > 20 ? "0 8px 30px rgba(0,0,0,.06)" : "none";
-    });
-
-</script>
+<script src="nav.js"></script>
 </body>
 </html>

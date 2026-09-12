@@ -8,8 +8,8 @@
     <link rel="icon" href="assets/elevora-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=photos2">
 </head>
 <body>
 <header>
@@ -20,11 +20,12 @@
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
-                <a href="project.html">Featured Project</a>
+                <a href="project.html">Projects</a>
                 <a href="residences.html" class="active">Residences</a>
                 <a href="amenities.html">Amenities</a>
                 <a href="location.html">Location</a>
                 <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-enquire">Enquire Now</a>
             </div>
             <div class="header-social">
                 <a href="tel:+919062274928" aria-label="Call Elevora">
@@ -38,13 +39,15 @@
                 </a>
             </div>
             <a href="contact.html" class="btn btn-red header-cta">Enquire Now</a>
-            <button class="menu-btn" id="menuBtn">☰</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </div>
 </header>
 
 <main>
-<section class="page-hero">
+<section class="page-hero page-hero-residences">
     <div class="container">
         <div class="section-kicker">Vinayak 21 Acres</div>
         <h1>2 &amp; 3 BHK Residences</h1>
@@ -55,6 +58,7 @@
     <div class="container">
         <div class="residence-grid">
             <article class="residence-card">
+                <div class="residence-photo"><img src="assets/im4.jpg" alt="2 BHK residences with balcony views"></div>
                 <div class="residence-top"><div class="residence-type">2 BHK</div><h3>2 BHK 2T</h3><p>Compact 2T layout.</p></div>
                 <div class="residence-details">
                     <div class="detail-row"><span>Carpet Area</span><strong>596–597 sq ft*</strong></div>
@@ -65,6 +69,7 @@
                 </div>
             </article>
             <article class="residence-card">
+                <div class="residence-photo"><img src="assets/im2.jpg" alt="3 BHK homes in the G+21 towers"></div>
                 <div class="residence-top"><div class="residence-type">3 BHK</div><h3>Smart</h3><p>Open views, 2T plan.</p></div>
                 <div class="residence-details">
                     <div class="detail-row"><span>Configuration</span><strong>3 BHK 2T</strong></div>
@@ -75,6 +80,7 @@
                 </div>
             </article>
             <article class="residence-card">
+                <div class="residence-photo"><img src="assets/im1.jpg" alt="Luxury 3 BHK living beside the community plaza"></div>
                 <div class="residence-top"><div class="residence-type">3 BHK</div><h3>Luxury</h3><p>Larger 3T plan.</p></div>
                 <div class="residence-details">
                     <div class="detail-row"><span>Configuration</span><strong>3 BHK 3T</strong></div>
@@ -143,24 +149,6 @@
         </div>
     </div>
 </footer>
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    menuBtn.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-        menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
-    });
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuBtn.textContent = "☰";
-        });
-    });
-    window.addEventListener("scroll", function() {
-        const header = document.querySelector("header");
-        header.style.boxShadow = window.scrollY > 20 ? "0 8px 30px rgba(0,0,0,.06)" : "none";
-    });
-
-</script>
+<script src="nav.js"></script>
 </body>
 </html>
